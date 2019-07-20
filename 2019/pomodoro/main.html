@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="/2019/pomodoro/style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>main.html</title>
+  </head>
+  <body>
+    <ul class="main_navbar">
+      <li>
+        <i class="material-icons">list </i>
+      </li>
+      <li>
+        <i class="material-icons"> assessment </i>
+      </li>
+      <li>
+        <i class="material-icons"> library_music </i>
+      </li>
+      <li>
+        <h1>POMODORO</h1>
+      </li>
+    </ul>
+
+    <main>
+      <form>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="ADD A NEW MISSION…"
+          />
+        </div>
+      </form>
+      <div class="circleBox">
+        <h1 id="rest_time"></h1>
+
+        <div id="play_btn" class="main_circle play_color">
+          <div id="stop_btn" class="stop_btn stop_btn_play_color"></div>
+          <i id="play_icon" class="material-icons d-block"
+            >play_circle_filled_white</i
+          >
+          <i
+            id="pause_icon"
+            class="material-icons d-none"
+            style="color: #FF4384"
+            >pause_circle_filled</i
+          >
+        </div>
+        <div id="circle_process" class="circle_process d-none">
+          <div class="wrapper right">
+            <div id="rightcircle" class="circle rightcircle"></div>
+          </div>
+          <div class="wrapper left">
+            <div id="leftcircle" class="circle leftcircle"></div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="listbox">
+        <div class="working">
+          <li>
+            <div class="small_circle"></div>
+            <div class="task">
+              <p>THE FIRST THING TO DO TODAY</p>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </li>
+        </div>
+        <div class="waiting">
+          <li>
+            <div class="task">
+              <i class="material-icons">check_circle_outline </i>
+              <p>the second thing to do today</p>
+            </div>
+            <i class="material-icons">play_circle_outline </i>
+          </li>
+          <li>
+            <div class="task">
+              <i class="material-icons">check_circle_outline </i>
+              <p>the third thing to do today</p>
+            </div>
+            <i class="material-icons">play_circle_outline </i>
+          </li>
+          <li>
+            <div class="task">
+              <i class="material-icons">check_circle_outline </i>
+              <p>the forth thing to do today</p>
+            </div>
+            <i class="material-icons">play_circle_outline </i>
+          </li>
+        </div>
+      </ul>
+    </main>
+
+    <script src="./main.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

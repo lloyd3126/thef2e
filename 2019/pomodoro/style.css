@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: Roboto;
+}
+
+/* Futura */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #ffedf7 !important;
+  overflow: hidden;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  left: 65.35%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: #003164;
+  /* border: 5px solid #003164; */
+  z-index: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 800px;
+  width: 1325px;
+}
+
+.main_navbar {
+  display: inline-block;
+  position: absolute;
+  right: 85px;
+  list-style: none;
+  height: 100%;
+  z-index: 10;
+}
+
+.main_navbar li {
+  text-align: center;
+  margin-top: 48px;
+  width: 36px;
+}
+
+.main_navbar li * {
+  font-size: 36px;
+  color: #fff;
+}
+
+.main_navbar li:last-child {
+  transform: rotate(90deg);
+  margin: 0;
+  position: absolute;
+  bottom: 178px;
+  cursor: none;
+}
+
+.main_navbar i {
+  cursor: pointer;
+}
+
+.main_navbar h1 {
+  margin: 0;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: Futura;
+  font-weight: bold;
+}
+
+.circleBox {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 200px;
+  transform: translateY(-50%);
+  height: 520px;
+  width: 1040px;
+  z-index: 2;
+  /* border: 1px solid #000; */
+}
+
+.circleBox h1 {
+  display: inline-block;
+  color: #ff4384;
+  font-size: 176px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+}
+
+.circleBox .main_circle {
+  display: inline-block;
+  width: 520px;
+  height: 520px;
+  border: 3px solid #ff4384;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.circleBox .play_color {
+  background-color: #ff4384;
+}
+
+.circleBox .pause_color {
+  background-color: #fff;
+}
+
+.circleBox .mask::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 12px;
+  border: 1px solid #ff4384;
+  background-color: #ff4384;
+  position: absolute;
+  z-index: 10;
+  bottom: -21px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circleBox .main_circle::after {
+  content: '';
+  display: block;
+  width: 550px;
+  height: 550px;
+  border: 3px solid #ff4384;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circleBox .stop_btn {
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  bottom: 41.5%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.circleBox .stop_btn_play_color {
+  background-color: #fff;
+}
+
+.circleBox .stop_btn_pause_color {
+  background-color: #ff4384;
+}
+
+.circleBox i {
+  font-size: 96px;
+  width: 96px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* 進度條 */
+/* https://sevenhao.github.io/qhao/web/css-aritcle/css-property/CSS%E5%AE%9E%E7%8E%B0%E5%9C%86%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1.html */
+
+.circle_process {
+  position: absolute;
+  top: 50%;
+  right: -14.5px;
+  transform: translateY(-50%);
+  width: 549px;
+  height: 549px;
+}
+.circle_process .wrapper {
+  width: 274.5px;
+  height: 549px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  /* border: 1px solid #000; */
+}
+.circle_process .right {
+  right: 0;
+}
+.circle_process .left {
+  left: 0;
+}
+.circle_process .circle {
+  width: 549px;
+  height: 549px;
+  border: 50px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.circle_process .rightcircle {
+  border-top: 50px solid #ff4384;
+  border-right: 50px solid #ff4384;
+  right: 0;
+}
+
+.circle_process .leftcircle {
+  border-bottom: 50px solid #ff4384;
+  border-left: 50px solid #ff4384;
+  left: 0;
+}
+
+.circle_process .ani_r_10s {
+  animation: circle_right 10s linear;
+}
+
+.circle_process .ani_l_10s {
+  animation: circle_left 10s linear;
+}
+
+.circle_process .ani_r_60s {
+  animation: circle_right 60s linear;
+}
+
+.circle_process .ani_l_60s {
+  animation: circle_left 60s linear;
+}
+
+.circle_process .ani_r_300s {
+  animation: circle_right 300s linear;
+}
+
+.circle_process .ani_l_300s {
+  animation: circle_left 300s linear;
+}
+
+.circle_process .ani_r_1500s {
+  animation: circle_right 1500s linear;
+}
+
+.circle_process .ani_l_1500s {
+  animation: circle_left 1500s linear;
+}
+
+@keyframes circle_right {
+  100% {
+    transform: rotate(-135deg);
+  }
+  50%,
+  0% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes circle_left {
+  100%,
+  50% {
+    transform: rotate(-135deg);
+  }
+  0% {
+    transform: rotate(45deg);
+  }
+}
+
+/* 進度條 */
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 445px;
+  position: absolute;
+  top: 48px;
+  left: 85px;
+}
+
+form input {
+  height: 56px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 6px 40px 6px 16px !important;
+  color: #ff4384 !important;
+  font-style: italic !important;
+  font-weight: bold !important;
+}
+
+form .form-group::before {
+  content: '+';
+  display: block;
+  height: 56px;
+  font-size: 24px;
+  color: #ff4384;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+form input::placeholder {
+  color: #ff4384 !important;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.listbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 445px;
+  position: absolute;
+  bottom: 85px;
+  left: 85px;
+  height: 450px;
+}
+
+.listbox li {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.listbox li * {
+  display: inline-block;
+}
+
+.listbox .task p {
+  padding-left: 4px;
+  font-size: 16px;
+  margin: 0;
+  font-weight: bold;
+  color: #003164;
+}
+
+.listbox .task i {
+  font-size: 24px;
+  margin: 0;
+  color: #003164;
+}
+
+.listbox .task i::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 50%;
+  background-color: #ffedf7;
+}
+
+/* working */
+
+.listbox .working li {
+  justify-content: flex-start;
+}
+
+.listbox .working li p {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.listbox .task {
+  display: flex;
+}
+
+.listbox .working .small_circle {
+  width: 48px;
+  height: 48px;
+  z-index: 2;
+  border-radius: 50%;
+  border: 2px solid #003164;
+}
+
+.listbox .working .task {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45px;
+  margin-left: 14px;
+}
+
+.listbox .working .task p {
+  padding-left: 0px;
+}
+
+.listbox .working .task ul {
+  line-height: 12px;
+}
+
+.listbox .working .task ul li {
+  width: 12px;
+  height: 12px;
+  background-color: #003164;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.listbox .working li {
+  border: 0;
+}
+
+/* waiting */
+
+.listbox .waiting::after {
+  content: 'MORE';
+  display: block;
+  text-align: right;
+  font-size: 16px;
+  color: #ff4384;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.listbox .waiting .task i::before {
+  width: 14px;
+  height: 14px;
+}
+
+#play_icon,
+#pause_icon,
+#stop_btn {
+  cursor: pointer;
+}
